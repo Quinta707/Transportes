@@ -1,4 +1,6 @@
-﻿using Academia.Proyecto.API.Infrastructure;
+﻿using Academia.Proyecto.API._Common;
+using Academia.Proyecto.API._Features.Viajes.Dtos;
+using Academia.Proyecto.API.Infrastructure;
 using Academia.Proyecto.API.Infrastructure.TransporteDB.Entities;
 using AutoMapper;
 using Farsiman.Domain.Core.Standard.Repositories;
@@ -17,10 +19,25 @@ namespace Academia.Proyecto.API._Features.Viajes
             _mapper = mapper;
         }
 
-        public List<Viaje> ListarViajes()
+        public Respuesta<List<ViajesListDto>> ListarViajes()
         {
-            List<Viaje> viajes = _unitOfWork.Repository<Viaje>().AsQueryable().ToList();
-            return viajes;
+            var viajesList = (from  viaje   in _unitOfWork.Repository<Viaje>().AsQueryable()
+                              join  transp  in _unitOfWork.Repository<Transportista>().AsQueryable()
+                              on    viaje.TransportistaId equals transp.TransportistaId
+                              select new ViajesListDto
+                              {
+                                  ViajeId = viaje.ViajeId,
+
+                              }).ToList();
+            return Respuesta.Success(viajesList, Codigos.Success);
         }
+
+        //public List<Viaje> ListarViajes()
+        //{
+        //    List<Viaje> viajes = _unitOfWork.Repository<Viaje>().AsQueryable().ToList();
+        //    return viajes;
+        //}
+
+
     }
 }

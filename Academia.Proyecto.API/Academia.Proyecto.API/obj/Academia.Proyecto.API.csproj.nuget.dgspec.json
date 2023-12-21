@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\squintanilla\\source\\repos\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj": {}
+    "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\squintanilla\\source\\repos\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj": {
+    "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\squintanilla\\source\\repos\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj",
+        "projectUniqueName": "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj",
         "projectName": "Academia.Proyecto.API",
-        "projectPath": "C:\\Users\\squintanilla\\source\\repos\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj",
-        "packagesPath": "C:\\Users\\squintanilla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\squintanilla\\source\\repos\\Academia.Proyecto.API\\Academia.Proyecto.API\\obj\\",
+        "projectPath": "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj",
+        "packagesPath": "C:\\Users\\Sarai Quintanilla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\squintanilla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sarai Quintanilla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://sertfs.grupofarsiman.com/FarsimanPackages/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

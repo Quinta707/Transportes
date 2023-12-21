@@ -141,3 +141,6 @@ C:\Users\squintanilla\source\repos\Academia.Proyecto.API\Academia.Proyecto.API\o
 C:\Users\squintanilla\source\repos\Academia.Proyecto.API\Academia.Proyecto.API\obj\Debug\net8.0\Academia.Proyecto.API.pdb
 C:\Users\squintanilla\source\repos\Academia.Proyecto.API\Academia.Proyecto.API\obj\Debug\net8.0\Academia.Proyecto.API.genruntimeconfig.cache
 C:\Users\squintanilla\source\repos\Academia.Proyecto.API\Academia.Proyecto.API\obj\Debug\net8.0\ref\Academia.Proyecto.API.dll
+C:\Users\Sarai Quintanilla\Documents\GitHub\Transportes\Academia.Proyecto.API\Academia.Proyecto.API\obj\Debug\net8.0\Academia.Proyecto.API.dll
+C:\Users\Sarai Quintanilla\Documents\GitHub\Transportes\Academia.Proyecto.API\Academia.Proyecto.API\obj\Debug\net8.0\refint\Academia.Proyecto.API.dll
+C:\Users\Sarai Quintanilla\Documents\GitHub\Transportes\Academia.Proyecto.API\Academia.Proyecto.API\obj\Debug\net8.0\Academia.Proyecto.API.pdb
