@@ -1,4 +1,6 @@
-﻿namespace Academia.Proyecto.API._Features.Viajes.Dtos
+﻿using Academia.Proyecto.API.Infrastructure.TransporteDB.Entities;
+
+namespace Academia.Proyecto.API._Features.Viajes.Dtos
 {
     public class ViajesListDto
     {
@@ -8,9 +10,13 @@
 
         public string? TransportistaNombre { get; set; }
 
+        public string? TransportistaApellido { get; set; }
+
         public DateTime? FechaViaje { get; set; }
 
-        public int? TarifaPorKm { get; set; }
+        public decimal? TarifaPorKm { get; set; }
+
+        public List<ViajesDetallesListDto> ViajesDetalles { get; set; } = new List<ViajesDetallesListDto>();
 
     }
 }
