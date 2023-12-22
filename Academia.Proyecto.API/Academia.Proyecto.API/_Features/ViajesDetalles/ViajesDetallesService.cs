@@ -22,20 +22,27 @@ namespace Academia.Proyecto.API._Features.ViajesDetalles
         public Respuesta<List<ViajesDetallesListDto>> ListarViajeDetalle()
         {
             var viajesDetallesList = (from viajedetalle in _unitOfWork.Repository<ViajesDetallesListDto>().AsQueryable()
-                                       join sucursalxempleado in _unitOfWork.Repository<SucursalesXempleado>().AsQueryable()
-                                       on viajedetalle.SucursalXempleadoId equals sucursalxempleado.SucursalXempleadoId
-                                       join empleados in _unitOfWork.Repository<Empleado>().AsQueryable()
-                                       on sucursalxempleado.EmpleadoId equals empleados.EmpleadoId
-                                       join sucursales in _unitOfWork.Repository<Sucursale>().AsQueryable()
-                                       on sucursalxempleado.SucursalId equals sucursales.SucursalId
-                                       select new ViajesDetallesListDto
-                                       {
-                                           ViajeDetalleId = viajedetalle.ViajeDetalleId,
-                                           EmpleadoNombre = empleados.Nombre,
-                                           EmpleadoApellido = empleados.Apellido,
-                                           SucursalNombre = sucursales.Nombre,
-                                           Kilometros = sucursalxempleado.Kilometros,
-                                       }).ToList();
+                                      select viajedetalle).GroupBy(x => x.ViajeId).Select(x => new ViajesDetallesListDto
+                                      {
+                                          ViajeId = x.Key,
+                                          SucursalXempleadoId = x.Count(),
+                                          Kilometros = x.Sum(x => x.Kilometros),
+                                      }).ToList();
+                //(from viajedetalle in _unitOfWork.Repository<ViajesDetallesListDto>().AsQueryable()
+                //                       join sucursalxempleado in _unitOfWork.Repository<SucursalesXempleado>().AsQueryable()
+                //                       on viajedetalle.SucursalXempleadoId equals sucursalxempleado.SucursalXempleadoId
+                //                       join empleados in _unitOfWork.Repository<Empleado>().AsQueryable()
+                //                       on sucursalxempleado.EmpleadoId equals empleados.EmpleadoId
+                //                       join sucursales in _unitOfWork.Repository<Sucursale>().AsQueryable()
+                //                       on sucursalxempleado.SucursalId equals sucursales.SucursalId
+                //                       select new ViajesDetallesListDto
+                //                       {
+                //                           ViajeDetalleId = viajedetalle.ViajeDetalleId,
+                //                           EmpleadoNombre = empleados.Nombre,
+                //                           EmpleadoApellido = empleados.Apellido,
+                //                           SucursalNombre = sucursales.Nombre,
+                //                           Kilometros = sucursalxempleado.Kilometros,
+                //                       }).ToList();
             return Respuesta.Success(viajesDetallesList, Mensajes.Proceso_Exitoso, Codigos.Success);
         }
     }

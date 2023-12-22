@@ -14,7 +14,7 @@
 
         public string? SucursalNombre { get; set; }
 
-        public decimal? Kilometros { get; set; }
+        public int? Kilometros { get; set; }
 
         public int? UsuarioCreacionId { get; set; }
 

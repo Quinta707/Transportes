@@ -8,9 +8,13 @@
 
         public int? SucursalXempleadoId { get; set; }
 
+        public int? EmpleadoId { get; set; }
+
         public string? EmpleadoNombre { get; set; }
 
         public string? EmpleadoApellido { get; set; }
+
+        public int? SucursalId { get; set; }
 
         public string? SucursalNombre { get; set; }
 

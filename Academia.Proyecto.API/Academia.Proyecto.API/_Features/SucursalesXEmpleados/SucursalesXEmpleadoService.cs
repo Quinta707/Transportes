@@ -34,7 +34,7 @@ namespace Academia.Proyecto.API._Features.SucursalesXEmpleados
                                               EmpleadoId = empleado.EmpleadoId,
                                               EmpleadoNombre = empleado.Nombre,
                                               EmpleadoApellido = empleado.Apellido,
-                                              Kilometros = sucursalempleado.Kilometros,
+                                              Kilometros = (int?)sucursalempleado.Kilometros,
                                               UsuarioCreacionId = sucursalempleado.UsuarioCreacionId,
 
                                           }).ToList();

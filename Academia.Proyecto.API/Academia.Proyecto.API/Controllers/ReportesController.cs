@@ -15,10 +15,17 @@ namespace Academia.Proyecto.API.Controllers
             _reportesService = reportesService;
         }
 
-        [HttpGet("ReporteEmpleados")]
+        [HttpGet("ReporteViajesEmpleados")]
         public IActionResult ReporteEmpleados()
         {
             var respuesta = _reportesService.ReporteViajesEmpleados();
+            return Ok(respuesta);
+        }
+
+        [HttpGet("ReporteViajesTransportistas")]
+        public IActionResult ReporteTransportistas()
+        {
+            var respuesta = _reportesService.ReporteViajesTransportistas();
             return Ok(respuesta);
         }
     }

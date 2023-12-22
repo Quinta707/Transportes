@@ -18,7 +18,8 @@ namespace Academia.Proyecto.API.Controllers
         [HttpGet("Listar")]
         public IActionResult Index()
         {
-
+            var respuesta = _viajesDetallesService.ListarViajeDetalle();
+            return Ok(respuesta);
         }
     }
 }
