@@ -6,6 +6,7 @@ using Academia.Proyecto.API._Features.SucursalesXEmpleados;
 using Academia.Proyecto.API._Features.Transportistas;
 using Academia.Proyecto.API._Features.Usuarios;
 using Academia.Proyecto.API._Features.Viajes;
+using Academia.Proyecto.API._Features.ViajesDetalles;
 using Academia.Proyecto.API.Infrastructure;
 using Academia.Proyecto.API.Infrastructure.TransporteDB;
 using Farsiman.Extensions.Configuration;
@@ -24,6 +25,7 @@ builder.Services.AddTransient<UnitOfWorkBuilder, UnitOfWorkBuilder>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddTransient<ViajesService>();
+builder.Services.AddTransient<ViajesDetallesService>();
 builder.Services.AddTransient<EmpleadosService>();
 builder.Services.AddTransient<TransportistasService>();
 builder.Services.AddTransient<SucursalesService>();

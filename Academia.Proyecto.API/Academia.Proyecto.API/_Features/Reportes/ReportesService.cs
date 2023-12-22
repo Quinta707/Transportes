@@ -28,12 +28,48 @@ namespace Academia.Proyecto.API._Features.Reportes
                                on sucursalxempleado.SucursalXempleadoId equals viajedet.SucursalXempleadoId
                                join sucursales in _unitOfWork.Repository<Sucursale>().AsQueryable()
                                on sucursalxempleado.SucursalId equals sucursales.SucursalId
-                               select new ReporteViajes
+                               group new ReporteViajes
                                {
                                    EmpleadoId = empleados.EmpleadoId,
                                    EmpleadoNombre = empleados.Nombre,
                                    EmpleadoApellido = empleados.Apellido,
-                                   //CantidadViajes = empleados.Count(),
+                                   CantidadViajes = viajedet.ViajeId,
+                               }
+                               by new { EmpleadoId = empleados.EmpleadoId, EmpleadoNombre = empleados.Nombre, EmpleadoApellido = empleados.Apellido, }
+                               into emp select new ReporteViajes
+                               {
+                                   EmpleadoId = emp.Key.EmpleadoId,
+                                   EmpleadoNombre = emp.Key.EmpleadoNombre,
+                                   EmpleadoApellido = emp.Key.EmpleadoApellido,
+                                   CantidadViajes = emp.Count()
+                               }).ToList();
+            //return Respuesta.Success(reporteList, Mensajes.Proceso_Exitoso, Codigos.Success);
+            return Respuesta<List<ReporteViajes>>.Success(reporteList);
+        }
+        public Respuesta<List<ReporteViajes>> ReporteViajesEmpleados()
+        {
+            var reporteList = (from empleados in _unitOfWork.Repository<Empleado>().AsQueryable()
+                               join sucursalxempleado in _unitOfWork.Repository<SucursalesXempleado>().AsQueryable()
+                               on empleados.EmpleadoId equals sucursalxempleado.EmpleadoId
+                               join viajedet in _unitOfWork.Repository<ViajesDetalle>().AsQueryable()
+                               on sucursalxempleado.SucursalXempleadoId equals viajedet.SucursalXempleadoId
+                               join sucursales in _unitOfWork.Repository<Sucursale>().AsQueryable()
+                               on sucursalxempleado.SucursalId equals sucursales.SucursalId
+                               group new ReporteViajes
+                               {
+                                   EmpleadoId = empleados.EmpleadoId,
+                                   EmpleadoNombre = empleados.Nombre,
+                                   EmpleadoApellido = empleados.Apellido,
+                                   CantidadViajes = viajedet.ViajeId,
+                               }
+                               by new { EmpleadoId = empleados.EmpleadoId, EmpleadoNombre = empleados.Nombre, EmpleadoApellido = empleados.Apellido, }
+                               into emp
+                               select new ReporteViajes
+                               {
+                                   EmpleadoId = emp.Key.EmpleadoId,
+                                   EmpleadoNombre = emp.Key.EmpleadoNombre,
+                                   EmpleadoApellido = emp.Key.EmpleadoApellido,
+                                   CantidadViajes = emp.Count()
                                }).ToList();
             return Respuesta.Success(reporteList, Mensajes.Proceso_Exitoso, Codigos.Success);
         }

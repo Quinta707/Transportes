@@ -1,4 +1,4 @@
-﻿namespace Academia.Proyecto.API._Features.Viajes.Dtos
+﻿namespace Academia.Proyecto.API._Features.ViajesDetalles.Dtos
 {
     public class ViajesDetallesListDto
     {

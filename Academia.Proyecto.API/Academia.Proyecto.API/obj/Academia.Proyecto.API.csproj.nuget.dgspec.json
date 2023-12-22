@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj": {}
+    "\\\\grupofarsiman.com\\files$\\TI\\Documentos\\squintanilla\\My Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj": {
+    "\\\\grupofarsiman.com\\files$\\TI\\Documentos\\squintanilla\\My Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj",
+        "projectUniqueName": "\\\\grupofarsiman.com\\files$\\TI\\Documentos\\squintanilla\\My Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj",
         "projectName": "Academia.Proyecto.API",
-        "projectPath": "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj",
-        "packagesPath": "C:\\Users\\Sarai Quintanilla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sarai Quintanilla\\Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\obj\\",
+        "projectPath": "\\\\grupofarsiman.com\\files$\\TI\\Documentos\\squintanilla\\My Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\Academia.Proyecto.API.csproj",
+        "packagesPath": "C:\\Users\\squintanilla\\.nuget\\packages\\",
+        "outputPath": "\\\\grupofarsiman.com\\files$\\TI\\Documentos\\squintanilla\\My Documents\\GitHub\\Transportes\\Academia.Proyecto.API\\Academia.Proyecto.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sarai Quintanilla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\squintanilla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://sertfs.grupofarsiman.com/FarsimanPackages/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,13 +53,29 @@
               "target": "Package",
               "version": "[3.0.1, )"
             },
+            "Farsiman.AuthServer.Extensions": {
+              "target": "Package",
+              "version": "[1.0.35371, )"
+            },
             "Farsiman.Domain.Core.Validations.Standard": {
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "Farsiman.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.29723.0, )"
+            },
             "Farsiman.Infraestructure.Core.Entity.Standard": {
               "target": "Package",
               "version": "[8.0.60115, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "Humanizer": {
+              "target": "Package",
+              "version": "[2.14.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

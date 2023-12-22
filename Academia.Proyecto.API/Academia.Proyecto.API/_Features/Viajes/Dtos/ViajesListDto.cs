@@ -1,4 +1,5 @@
-﻿using Academia.Proyecto.API.Infrastructure.TransporteDB.Entities;
+﻿using Academia.Proyecto.API._Features.ViajesDetalles.Dtos;
+using Academia.Proyecto.API.Infrastructure.TransporteDB.Entities;
 
 namespace Academia.Proyecto.API._Features.Viajes.Dtos
 {
